@@ -1,0 +1,178 @@
+body {
+  margin: 0px;
+}
+
+#root {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--cosmograph-search-input-background);
+}
+
+.toggleButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebarStyle {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 350px;
+  max-height: calc(100% - 20px);
+  overflow-y: visible;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  background: rgba(34, 34, 34, 0.85);
+  border-radius: 5px;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 99;
+}
+
+/* Collapsed state for sidebar */
+.sidebarStyle.closed {
+  transform: translateX(100%); /* Moves the sidebar out of view */
+}
+
+/* Open state for sidebar */
+.sidebarStyle.open {
+  transform: translateX(0); /* Moves the sidebar into view */
+}
+
+.cosmographStyle {
+  overflow: auto;
+  height: 100%;
+  display: flex;
+}
+
+
+.infoBox {
+  background: rgba(34, 34, 34, 0.85); /* Semi-transparent dark background */
+  color: #fff; /* White text for contrast */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  max-height: 80vh;
+  overflow: hidden; /* Prevent the entire box from scrolling */
+  width: 300px; /* Set a fixed width */
+  max-width: 90%; /* Ensure it doesn’t go beyond the screen on smaller devices */
+  position: fixed; /* Ensures it doesn't affect other elements */
+  left: 10px; /* Position it on the left side */
+  top: 10px; /* Add spacing from the top */
+  z-index: 1000; /* Bring it above other elements */
+}
+
+.infoBoxList {
+  list-style: none;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  max-height: 150px; /* Restrict height to make it scrollable */
+  overflow-y: auto; /* Enable vertical scrolling for the list */
+  scrollbar-width: thin; /* Thin scrollbar for better aesthetics */
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(34, 34, 34, 0.85); /* Custom scrollbar colors */
+}
+
+.infoBoxListItem {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.1); /* Slightly lighter background */
+  border-radius: 6px; /* Rounded corners */
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.infoBoxListItem:hover {
+  background: rgba(255, 255, 255, 0.2); /* Highlight on hover */
+  transform: translateY(-3px); /* Slight hover animation */
+}
+
+.infoBoxListItem strong {
+  color: #fff; /* Accent color for key labels */
+}
+
+.emptyState {
+  font-size: 12px;
+  text-align: center;
+  color: #aaa; /* Subtle gray text for empty state */
+  font-style: italic;
+}
+
+.timelineStyle {
+  height: 80px;
+  padding: 0.5rem;
+}
+
+.searchStyle {
+  margin-left: 5px;
+}
+
+.histogramWrapper {
+  margin-left: 5px;
+  border-radius: 5px;
+  background: rgb(34 34 34 / 70%);
+  padding: 3px;
+}
+
+.histogramStyle {
+  height: 50px;
+  background: none;
+}
+
+.histogramTitle {
+  position: relative;
+  margin-top: 15px;
+  color: white;
+}
+
+.infoStyle {
+  margin: 8px;
+  color: white;
+  font-size: 14px;
+  white-space: pre-line;
+}
+
+/* Dropdown styling */
+#colorizeDropdown {
+  width: 200px; /* Adjust dropdown width */
+  padding: 8px;
+  font-size: 15px;
+  color: #fff;
+  background-color: rgba(34, 34, 34, 0.85);
+  border: 1px solid #919191;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  transition: background 0.3s, border 0.3s;
+}
+
+#colorizeDropdown:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ccc;
+}
+
+#colorizeDropdown:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#colorizeDropdown option {
+  color: #333;
+  background: #fff;
+  font-size: 14px;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "cosmograph-q",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@cosmograph/react": "1.4.0-beta.0",
+    "@types/d3-scale": "4.0.3",
+    "chroma-js": "^3.1.2",
+    "d3": "^7.9.0",
+    "d3-scale": "4.0.2",
+    "loader-utils": "3.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.4.4",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "prettier": "3.3.3",
+    "typescript": "4.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
